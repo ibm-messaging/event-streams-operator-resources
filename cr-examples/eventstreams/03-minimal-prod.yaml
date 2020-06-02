@@ -1,0 +1,61 @@
+###############################################################################
+#
+# Licensed Materials - Property of IBM
+#
+# 5737-H33
+#
+# (C) Copyright IBM Corp. 2020  All Rights Reserved.
+#
+# US Government Users Restricted Rights - Use, duplication or
+# disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+#
+###############################################################################
+apiVersion: eventstreams.ibm.com/v1beta1
+kind: EventStreams
+metadata:
+  name: minimal-prod
+spec:
+  license:
+    accept: false
+    use: CloudPakForIntegrationProduction
+  version: 10.0.0
+  adminApi: {}
+  adminUI: {}
+  collector: {}
+  restProducer: {}
+  schemaRegistry:
+    storage:
+      type: persistent-claim
+      size: enter-size-of-pv-here
+      class: enter-storage-class-name-here
+  strimziOverrides:
+    kafka:
+      replicas: 3
+      config:
+        interceptor.class.names: com.ibm.eventstreams.interceptors.metrics.ProducerMetricsInterceptor
+        num.replica.fetchers: 3
+        num.io.threads: 24
+        num.network.threads: 9
+        log.cleaner.threads: 6
+      listeners:
+        external:
+          type: route
+          authentication:
+            type: scram-sha-512
+        tls:
+          authentication:
+            type: tls
+      authorization:
+        type: runas
+      storage:
+        type: persistent-claim
+        size: enter-size-of-pv-here
+        class: enter-storage-class-name-here
+      metrics: {}
+    zookeeper:
+      replicas: 3
+      storage:
+        type: persistent-claim
+        size: enter-size-of-pv-here
+        class: enter-storage-class-name-here
+      metrics: {}
