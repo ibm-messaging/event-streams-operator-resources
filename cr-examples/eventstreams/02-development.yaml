@@ -1,0 +1,59 @@
+###############################################################################
+#
+# Licensed Materials - Property of IBM
+#
+# 5737-H33
+#
+# (C) Copyright IBM Corp. 2020  All Rights Reserved.
+#
+# US Government Users Restricted Rights - Use, duplication or
+# disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+#
+###############################################################################
+apiVersion: eventstreams.ibm.com/v1beta1
+kind: EventStreams
+metadata:
+  name: development
+spec:
+  version: 10.0.0
+  license:
+    # By installing this product you accept the license terms at https://ibm.biz/es-license
+    accept: false
+    use: CloudPakForIntegrationNonProduction
+  adminApi: {}
+  adminUI: {}
+  collector: {}
+  restProducer: {}
+  schemaRegistry:
+    storage:
+      type: ephemeral
+  strimziOverrides:
+    kafka:
+      replicas: 3
+      authorization:
+        type: runas
+      config:
+        inter.broker.protocol.version: "2.5"
+        interceptor.class.names: com.ibm.eventstreams.interceptors.metrics.ProducerMetricsInterceptor
+        log.cleaner.threads: 6
+        log.message.format.version: "2.5"
+        num.io.threads: 24
+        num.network.threads: 9
+        num.replica.fetchers: 3
+        offsets.topic.replication.factor: 3
+      listeners:
+        external:
+          authentication:
+            type: scram-sha-512
+          type: route
+        tls:
+          authentication:
+            type: tls
+      metrics: {}
+      storage:
+        type: ephemeral
+    zookeeper:
+      replicas: 3
+      metrics: {}
+      storage:
+        type: ephemeral
