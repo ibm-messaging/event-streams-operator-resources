@@ -1,7 +1,7 @@
 apiVersion: monitoringcontroller.cloud.ibm.com/v1
 kind: MonitoringDashboard
 metadata:
-  name: eventstreams-kafka-health
+  name: eventstreams-kafka
 spec:
   enabled: true
   data: |-
@@ -23,12 +23,12 @@ spec:
       "gnetId": null,
       "graphTooltip": 0,
       "id": null,
-      "iteration": 1591866177100,
+      "iteration": 1590489439493,
       "links": [],
       "panels": [
         {
           "collapsed": false,
-          "datasource": null,
+          "datasource": "prometheus",
           "gridPos": {
             "h": 1,
             "w": 24,
@@ -294,7 +294,7 @@ spec:
         },
         {
           "collapsed": false,
-          "datasource": null,
+          "datasource": "prometheus",
           "gridPos": {
             "h": 1,
             "w": 24,
@@ -317,7 +317,7 @@ spec:
             "rgba(237, 129, 40, 0.89)",
             "#d44a3a"
           ],
-          "datasource": null,
+          "datasource": "prometheus",
           "format": "none",
           "gauge": {
             "maxValue": 100,
@@ -425,7 +425,7 @@ spec:
             "rgba(237, 129, 40, 0.89)",
             "#d44a3a"
           ],
-          "datasource": null,
+          "datasource": "prometheus",
           "decimals": null,
           "format": "none",
           "gauge": {
@@ -919,7 +919,7 @@ spec:
         },
         {
           "collapsed": false,
-          "datasource": null,
+          "datasource": "prometheus",
           "gridPos": {
             "h": 1,
             "w": 24,
@@ -1673,7 +1673,7 @@ spec:
         },
         {
           "collapsed": false,
-          "datasource": null,
+          "datasource": "prometheus",
           "gridPos": {
             "h": 1,
             "w": 24,
@@ -1789,8 +1789,8 @@ spec:
           {
             "allValue": null,
             "current": {
-              "text": "coffee",
-              "value": "coffee"
+              "text": "my-namespace",
+              "value": "my-namespace"
             },
             "datasource": "prometheus",
             "definition": "label_values(kubernetes_namespace)",
@@ -1814,8 +1814,8 @@ spec:
           {
             "allValue": null,
             "current": {
-              "text": "dalelane",
-              "value": "dalelane"
+              "text": "my-instance",
+              "value": "my-instance"
             },
             "datasource": "prometheus",
             "definition": "label_values(kube_statefulset_labels{namespace=\"$kubernetes_namespace\"}, label_eventstreams_ibm_com_cluster)",
@@ -1867,14 +1867,11 @@ spec:
             "allValue": "",
             "current": {
               "tags": [],
-              "text": "dalelane-kafka-0 + dalelane-kafka-1 + dalelane-kafka-2 + dalelane-kafka-3 + dalelane-kafka-4 + dalelane-kafka-5",
+              "text": "my-instance-kafka-0 + my-instance-kafka-1 + my-instance-kafka-2",
               "value": [
-                "dalelane-kafka-0",
-                "dalelane-kafka-1",
-                "dalelane-kafka-2",
-                "dalelane-kafka-3",
-                "dalelane-kafka-4",
-                "dalelane-kafka-5"
+                "my-instance-kafka-0",
+                "my-instance-kafka-1",
+                "my-instance-kafka-2"
               ]
             },
             "datasource": "prometheus",
@@ -1930,5 +1927,5 @@ spec:
       "timezone": "",
       "title": "IBM Event Streams Kafka",
       "uid": "KTUYr0m8u",
-      "version": 1
+      "version": 13
     }

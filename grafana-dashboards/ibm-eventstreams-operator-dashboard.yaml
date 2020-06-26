@@ -1,14 +1,14 @@
 apiVersion: monitoringcontroller.cloud.ibm.com/v1
 kind: MonitoringDashboard
 metadata:
-  name: eventstreams-operator
+  name: eventstreams-operators
 spec:
   enabled: true
   data: |-
     {
       "__inputs": [
         {
-          "name": "prometheus",
+          "name": "DS_PROMETHEUS",
           "label": "prometheus",
           "description": "",
           "type": "datasource",
@@ -72,7 +72,8 @@ spec:
           "id": 4,
           "panels": [],
           "title": "Custom Resources",
-          "type": "row"
+          "type": "row",
+          "datasource": "prometheus"
         },
         {
           "cacheTimeout": null,
@@ -578,7 +579,8 @@ spec:
           "id": 10,
           "panels": [],
           "title": "Reconciliations",
-          "type": "row"
+          "type": "row",
+          "datasource": "prometheus"
         },
         {
           "aliasColors": {},
@@ -1222,7 +1224,8 @@ spec:
           "id": 18,
           "panels": [],
           "title": "JVM",
-          "type": "row"
+          "type": "row",
+          "datasource": "prometheus"
         },
         {
           "aliasColors": {},
