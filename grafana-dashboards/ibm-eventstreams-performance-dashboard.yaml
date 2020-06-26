@@ -29,7 +29,7 @@ spec:
       "panels": [
         {
           "collapsed": false,
-          "datasource": null,
+          "datasource": "prometheus",
           "gridPos": {
             "h": 1,
             "w": 24,
@@ -46,7 +46,7 @@ spec:
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": null,
+          "datasource": "prometheus",
           "description": "Monitors the Event Streams pod status for a specific release to see if there are any pods that are unready or ready. Useful to determine the health of a release.",
           "fill": 1,
           "fillGradient": 0,
@@ -139,7 +139,7 @@ spec:
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": null,
+          "datasource": "prometheus",
           "description": "IBM Event Streams relies on some of the functionality provided by pods in IBM Common Services. This monitors the Common Services pod health to ensure that they are healthy.",
           "fill": 1,
           "fillGradient": 0,
@@ -231,7 +231,7 @@ spec:
         },
         {
           "collapsed": false,
-          "datasource": null,
+          "datasource": "prometheus",
           "gridPos": {
             "h": 1,
             "w": 24,
@@ -252,7 +252,7 @@ spec:
             "rgba(237, 129, 40, 0.89)",
             "#d44a3a"
           ],
-          "datasource": null,
+          "datasource": "prometheus",
           "description": "The Event Streams Cluster Operator is the controller of the Event Streams deployment. It is responsible for managing and deploying all Event Streams components. This tracks the current CPU usage of the Event Streams Operator. ",
           "format": "none",
           "gauge": {
@@ -342,7 +342,7 @@ spec:
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": null,
+          "datasource": "prometheus",
           "description": "The Event Streams Cluster Operator is the controller of the Event Streams deployment. It is responsible for managing and deploying all Event Streams components. This tracks the current CPU usage and limit of the Event Streams Operator. ",
           "fill": 1,
           "fillGradient": 0,
@@ -451,7 +451,7 @@ spec:
             "rgba(237, 129, 40, 0.89)",
             "#d44a3a"
           ],
-          "datasource": null,
+          "datasource": "prometheus",
           "description": "The Event Streams Cluster Operator is the controller of the Event Streams deployment. It is responsible for managing and deploying all Event Streams components. This tracks the current Memory usage of the Event Streams Operator. ",
           "format": "bytes",
           "gauge": {
@@ -540,7 +540,7 @@ spec:
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": null,
+          "datasource": "prometheus",
           "description": "The Event Streams Cluster Operator is the controller of the Event Streams deployment. It is responsible for managing and deploying all Event Streams components. This tracks the current memory usage and limit of the Event Streams Operator. ",
           "fill": 1,
           "fillGradient": 0,
@@ -643,7 +643,7 @@ spec:
         },
         {
           "collapsed": false,
-          "datasource": null,
+          "datasource": "prometheus",
           "gridPos": {
             "h": 1,
             "w": 24,
@@ -660,7 +660,7 @@ spec:
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": null,
+          "datasource": "prometheus",
           "description": "Admin API is an important component of Event Streams as it allows users to perform administrative tasks on their Kafka Brokers. There are many messages going into and out of Admin API. This tracks the bytes going in and out of Admin API.",
           "fill": 1,
           "fillGradient": 0,
@@ -1174,7 +1174,7 @@ spec:
         },
         {
           "collapsed": false,
-          "datasource": null,
+          "datasource": "prometheus",
           "gridPos": {
             "h": 1,
             "w": 24,
@@ -1616,7 +1616,7 @@ spec:
         },
         {
           "collapsed": false,
-          "datasource": null,
+          "datasource": "prometheus",
           "gridPos": {
             "h": 1,
             "w": 24,
@@ -2175,7 +2175,7 @@ spec:
         },
         {
           "collapsed": false,
-          "datasource": null,
+          "datasource": "prometheus",
           "gridPos": {
             "h": 1,
             "w": 24,
