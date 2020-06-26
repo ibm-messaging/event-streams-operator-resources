@@ -539,7 +539,7 @@ spec:
         },
         {
           "collapsed": false,
-          "datasource": null,
+          "datasource": "prometheus",
           "gridPos": {
             "h": 1,
             "w": 24,
@@ -556,7 +556,7 @@ spec:
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": null,
+          "datasource": "prometheus",
           "description": "Shows the rate of geo-replicated data in records per second, for each replicated topic",
           "fill": 0,
           "fillGradient": 0,
@@ -647,7 +647,7 @@ spec:
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": null,
+          "datasource": "prometheus",
           "description": "Shows the rate of geo-replicated data in bytes per second, , for each replicated topic",
           "fill": 0,
           "fillGradient": 0,
@@ -738,7 +738,7 @@ spec:
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": null,
+          "datasource": "prometheus",
           "description": "Shows the age of each record when consumed by the geo-replicator ",
           "fill": 0,
           "fillGradient": 0,
@@ -827,7 +827,7 @@ spec:
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": null,
+          "datasource": "prometheus",
           "description": "Shows the  times in ms between each record's timestamp and the acknowledgement at the destination cluster",
           "fill": 0,
           "fillGradient": 0,
@@ -913,7 +913,7 @@ spec:
         },
         {
           "collapsed": false,
-          "datasource": null,
+          "datasource": "prometheus",
           "gridPos": {
             "h": 1,
             "w": 24,
@@ -930,7 +930,7 @@ spec:
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": null,
+          "datasource": "prometheus",
           "description": "Shows the time in ms between the consumer group commit at the origin, and the acknowledgement at the destination cluster for the checkpoint",
           "fill": 0,
           "fillGradient": 0,
@@ -1017,7 +1017,7 @@ spec:
         },
         {
           "collapsed": false,
-          "datasource": null,
+          "datasource": "prometheus",
           "gridPos": {
             "h": 1,
             "w": 24,
