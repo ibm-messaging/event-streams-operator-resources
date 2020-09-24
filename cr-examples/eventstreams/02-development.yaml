@@ -15,28 +15,26 @@ kind: EventStreams
 metadata:
   name: development
 spec:
-  version: 10.0.0
+  version: 10.1.0
   license:
     # By installing this product you accept the license terms at https://ibm.biz/es-license
     accept: false
     use: CloudPakForIntegrationNonProduction
   adminApi: {}
   adminUI: {}
+  apicurioRegistry: {}
   collector: {}
   restProducer: {}
-  schemaRegistry:
-    storage:
-      type: ephemeral
   strimziOverrides:
     kafka:
       replicas: 3
       authorization:
         type: runas
       config:
-        inter.broker.protocol.version: "2.5"
+        inter.broker.protocol.version: "2.6"
         interceptor.class.names: com.ibm.eventstreams.interceptors.metrics.ProducerMetricsInterceptor
         log.cleaner.threads: 6
-        log.message.format.version: "2.5"
+        log.message.format.version: "2.6"
         num.io.threads: 24
         num.network.threads: 9
         num.replica.fetchers: 3
