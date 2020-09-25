@@ -1,7 +1,23 @@
+###############################################################################
+#
+# Licensed Materials - Property of IBM
+#
+# 5737-H33
+#
+# (C) Copyright IBM Corp. 2020  All Rights Reserved.
+#
+# US Government Users Restricted Rights - Use, duplication or
+# disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+#
+###############################################################################
 apiVersion: monitoringcontroller.cloud.ibm.com/v1
 kind: MonitoringDashboard
 metadata:
   name: eventstreams-operators
+  labels:
+    app.kubernetes.io/instance: eventstreams-operator
+    app.kubernetes.io/managed-by: eventstreams-cluster-operator
+    app.kubernetes.io/name: eventstreams-operators-dashboard
 spec:
   enabled: true
   data: |-
