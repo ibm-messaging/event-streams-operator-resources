@@ -15,7 +15,7 @@ kind: EventStreams
 metadata:
   name: prod-3-brokers
 spec:
-  version: 10.2.0-eus
+  version: 10.3.0
   license:
     # By installing this product you accept the license terms at https://ibm.biz/es-license
     accept: false
@@ -66,3 +66,6 @@ spec:
         type: persistent-claim
         size: 4Gi
         class: enter-storage-class-name-here
+  requestIbmServices:
+    iam: true
+    monitoring: true

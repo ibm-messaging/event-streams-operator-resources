@@ -15,7 +15,7 @@ kind: EventStreams
 metadata:
   name: development
 spec:
-  version: 10.2.0-eus
+  version: 10.3.0
   license:
     # By installing this product you accept the license terms at https://ibm.biz/es-license
     accept: false
@@ -55,3 +55,6 @@ spec:
       metrics: {}
       storage:
         type: ephemeral
+  requestIbmServices:
+    iam: true
+    monitoring: true
