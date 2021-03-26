@@ -25,7 +25,7 @@ fsGroup:
 kind: SecurityContextConstraints
 metadata:
   name: ibm-es-scc
-priority: 2
+priority: 0
 readOnlyRootFilesystem: false
 requiredDropCapabilities:
   - MKNOD
@@ -37,10 +37,7 @@ seLinuxContext:
   type: MustRunAs
 supplementalGroups:
   type: RunAsAny
-groups:
-  # If not running in the myproject namespace change this to the namespace of your installation or add an additional
-  # entry to the array
-  - system:serviceaccounts:myproject
+groups: []
 volumes:
   - configMap
   - downwardAPI
