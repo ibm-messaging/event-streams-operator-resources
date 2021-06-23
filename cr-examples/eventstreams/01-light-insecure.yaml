@@ -15,7 +15,7 @@ kind: EventStreams
 metadata:
   name: light-insecure
 spec:
-  version: 10.3.0
+  version: 10.3.1
   license:
     # By installing this product you accept the license terms at https://ibm.biz/es-license
     accept: false
