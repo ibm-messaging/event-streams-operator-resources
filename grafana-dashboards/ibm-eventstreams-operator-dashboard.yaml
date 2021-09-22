@@ -1281,10 +1281,10 @@ spec:
           "steppedLine": false,
           "targets": [
             {
-              "expr": "sum(jvm_memory_used_bytes{kubernetes_pod_name=~\"eventstreams-cluster-operator-.*\"}) by (kubernetes_pod_name)",
+              "expr": "sum(jvm_memory_used_bytes{pod=~\"eventstreams-cluster-operator-.*\"}) by (pod)",
               "format": "time_series",
               "intervalFactor": 1,
-              "legendFormat": "{{kubernetes_pod_name}}",
+              "legendFormat": "{{pod}}",
               "refId": "A"
             }
           ],
@@ -1367,9 +1367,9 @@ spec:
           "steppedLine": false,
           "targets": [
             {
-              "expr": "sum(rate(jvm_gc_pause_seconds_sum{kubernetes_pod_name=~\"eventstreams-cluster-operator-.*\"}[5m])) by (kubernetes_pod_name)",
+              "expr": "sum(rate(jvm_gc_pause_seconds_sum{pod=~\"eventstreams-cluster-operator-.*\"}[5m])) by (pod)",
               "format": "time_series",
-              "legendFormat": "{{kubernetes_pod_name}}",
+              "legendFormat": "{{pod}}",
               "intervalFactor": 1,
               "refId": "B"
             }
@@ -1453,10 +1453,10 @@ spec:
           "steppedLine": false,
           "targets": [
             {
-              "expr": "sum(rate(jvm_gc_pause_seconds_count{kubernetes_pod_name=~\"eventstreams-cluster-operator-.*\"}[5m])) by (kubernetes_pod_name)",
+              "expr": "sum(rate(jvm_gc_pause_seconds_count{pod=~\"eventstreams-cluster-operator-.*\"}[5m])) by (pod)",
               "format": "time_series",
               "intervalFactor": 1,
-              "legendFormat": "{{kubernetes_pod_name}}",
+              "legendFormat": "{{pod}}",
               "refId": "A"
             }
           ],
