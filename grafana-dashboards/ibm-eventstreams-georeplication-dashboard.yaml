@@ -4,7 +4,7 @@
 #
 # 5737-H33
 #
-# (C) Copyright IBM Corp. 2020  All Rights Reserved.
+# (C) Copyright IBM Corp. 2020, 2021  All Rights Reserved.
 #
 # US Government Users Restricted Rights - Use, duplication or
 # disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
@@ -1375,14 +1375,14 @@ spec:
               "value": "minimal-prod-d"
             },
             "datasource": "prometheus",
-            "definition": "label_values(kube_statefulset_labels{namespace=\"$kubernetes_namespace\"}, label_eventstreams_ibm_com_cluster)",
+            "definition": "label_values(kube_pod_labels{namespace=\"$kubernetes_namespace\"}, label_eventstreams_ibm_com_cluster)",
             "hide": 0,
             "includeAll": false,
             "label": "Cluster Name",
             "multi": false,
             "name": "eventstreams_cluster_name",
             "options": [],
-            "query": "label_values(kube_statefulset_labels{namespace=\"$kubernetes_namespace\"}, label_eventstreams_ibm_com_cluster)",
+            "query": "label_values(kube_pod_labels{namespace=\"$kubernetes_namespace\"}, label_eventstreams_ibm_com_cluster)",
             "refresh": 1,
             "regex": "",
             "skipUrlSync": false,
