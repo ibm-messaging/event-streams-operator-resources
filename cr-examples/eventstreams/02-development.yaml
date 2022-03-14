@@ -47,12 +47,22 @@ spec:
         tls:
           authentication:
             type: tls
-      metrics: {}
+      metricsConfig:
+        type: jmxPrometheusExporter
+        valueFrom:
+          configMapKeyRef:
+            key: metrics
+            name: kafka-metrics
       storage:
         type: ephemeral
     zookeeper:
       replicas: 3
-      metrics: {}
+      metricsConfig:
+        type: jmxPrometheusExporter
+        valueFrom:
+          configMapKeyRef:
+            key: metrics
+            name: zookeeper-metrics
       storage:
         type: ephemeral
   requestIbmServices:

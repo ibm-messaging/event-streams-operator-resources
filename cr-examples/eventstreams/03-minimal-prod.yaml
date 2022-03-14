@@ -47,14 +47,24 @@ spec:
         tls:
           authentication:
             type: tls
-      metrics: {}
+      metricsConfig:
+        type: jmxPrometheusExporter
+        valueFrom:
+          configMapKeyRef:
+            key: metrics
+            name: kafka-metrics
       storage:
         type: persistent-claim
         size: 4Gi
         class: ""
     zookeeper:
       replicas: 3
-      metrics: {}
+      metricsConfig:
+        type: jmxPrometheusExporter
+        valueFrom:
+          configMapKeyRef:
+            key: metrics
+            name: zookeeper-metrics
       storage:
         type: persistent-claim
         size: 2Gi

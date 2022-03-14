@@ -39,12 +39,22 @@ spec:
         transaction.state.log.replication.factor: 1
       listeners:
         plain: {}
-      metrics: {}
+      metricsConfig:
+        type: jmxPrometheusExporter
+        valueFrom:
+          configMapKeyRef:
+            key: metrics
+            name: kafka-metrics
       storage:
         type: ephemeral
     zookeeper:
       replicas: 1
-      metrics: {}
+      metricsConfig:
+        type: jmxPrometheusExporter
+        valueFrom:
+          configMapKeyRef:
+            key: metrics
+            name: zookeeper-metrics
       storage:
         type: ephemeral
   requestIbmServices:

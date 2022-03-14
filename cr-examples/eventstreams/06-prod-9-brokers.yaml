@@ -46,7 +46,12 @@ spec:
         tls:
           authentication:
             type: tls
-      metrics: {}
+      metricsConfig:
+        type: jmxPrometheusExporter
+        valueFrom:
+          configMapKeyRef:
+            key: metrics
+            name: kafka-metrics
       resources:
         requests:
           memory: 8096Mi
@@ -64,7 +69,12 @@ spec:
         type: persistent-claim
         size: 10Gi
         class: ""
-      metrics: {}
+      metricsConfig:
+        type: jmxPrometheusExporter
+        valueFrom:
+          configMapKeyRef:
+            key: metrics
+            name: zookeeper-metrics
   requestIbmServices:
     iam: true
     monitoring: true
