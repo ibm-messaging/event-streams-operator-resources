@@ -43,8 +43,8 @@ spec:
         type: jmxPrometheusExporter
         valueFrom:
           configMapKeyRef:
-            key: metrics
-            name: kafka-metrics
+            key: kafka-metrics-config.yaml
+            name: metrics-config
       storage:
         type: ephemeral
     zookeeper:
@@ -53,8 +53,8 @@ spec:
         type: jmxPrometheusExporter
         valueFrom:
           configMapKeyRef:
-            key: metrics
-            name: zookeeper-metrics
+            key: zookeeper-metrics-config.yaml
+            name: metrics-config
       storage:
         type: ephemeral
   requestIbmServices:

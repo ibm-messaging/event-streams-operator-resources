@@ -50,8 +50,8 @@ spec:
         type: jmxPrometheusExporter
         valueFrom:
           configMapKeyRef:
-            key: metrics
-            name: kafka-metrics
+            key: kafka-metrics-config.yaml
+            name: metrics-config
       resources:
         requests:
           memory: 8096Mi
@@ -73,8 +73,8 @@ spec:
         type: jmxPrometheusExporter
         valueFrom:
           configMapKeyRef:
-            key: metrics
-            name: zookeeper-metrics
+            key: zookeeper-metrics-config.yaml
+            name: metrics-config
   requestIbmServices:
     iam: true
     monitoring: true
