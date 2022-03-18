@@ -15,9 +15,9 @@ kind: EventStreams
 metadata:
   name: prod-9-brokers
 spec:
-  version: 10.2.0-eus
+  version: 10.2.1-eus
   license:
-    # By installing this product you accept the license terms at https://ibm.biz/es-license
+    # By installing this product you accept the license terms at https://ibm.biz/es-license-eus
     accept: false
     use: CloudPakForIntegrationProduction
   adminApi: {}
