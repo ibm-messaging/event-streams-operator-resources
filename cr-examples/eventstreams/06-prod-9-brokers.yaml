@@ -39,11 +39,16 @@ spec:
         num.network.threads: 9
         num.replica.fetchers: 9
       listeners:
-        external:
+        - name: external
+          port: 9094
           type: route
+          tls: true
           authentication:
             type: scram-sha-512
-        tls:
+        - name: tls
+          port: 9093
+          type: internal
+          tls: true
           authentication:
             type: tls
       metricsConfig:

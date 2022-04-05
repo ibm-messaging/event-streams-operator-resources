@@ -38,7 +38,10 @@ spec:
         transaction.state.log.min.isr: 1
         transaction.state.log.replication.factor: 1
       listeners:
-        plain: {}
+        - name: plain
+          port: 9092
+          type: internal
+          tls: false
       metricsConfig:
         type: jmxPrometheusExporter
         valueFrom:
