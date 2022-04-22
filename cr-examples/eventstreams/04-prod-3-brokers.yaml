@@ -4,18 +4,18 @@
 #
 # 5737-H33
 #
-# (C) Copyright IBM Corp. 2020, 2021  All Rights Reserved.
+# (C) Copyright IBM Corp. 2020, 2022  All Rights Reserved.
 #
 # US Government Users Restricted Rights - Use, duplication or
 # disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
 #
 ###############################################################################
-apiVersion: eventstreams.ibm.com/v1beta1
+apiVersion: eventstreams.ibm.com/v1beta2
 kind: EventStreams
 metadata:
   name: prod-3-brokers
 spec:
-  version: 10.5.0
+  version: 11.0.0
   license:
     # By installing this product you accept the license terms at https://ibm.biz/es-license
     accept: false
@@ -29,16 +29,19 @@ spec:
     kafka:
       replicas: 3
       authorization:
-        type: runas
+        type: custom
+        authorizerClass: com.ibm.eventstreams.runas.authorizer.RunAsAuthorizer
+        supportsAdminApi: true
       config:
-        inter.broker.protocol.version: "2.8"
-        interceptor.class.names: com.ibm.eventstreams.interceptors.metrics.ProducerMetricsInterceptor
+        inter.broker.protocol.version: "3.0"
         log.cleaner.threads: 6
-        log.message.format.version: "2.8"
+        log.message.format.version: "3.0"
         num.io.threads: 24
         num.network.threads: 9
         num.replica.fetchers: 3
         offsets.topic.replication.factor: 3
+        default.replication.factor: 3
+        min.insync.replicas: 2
       listeners:
         - name: external
           port: 9094
@@ -68,7 +71,7 @@ spec:
       storage:
         type: persistent-claim
         size: 10Gi
-        class: ""
+        class: enter-storage-class-name-here
     zookeeper:
       replicas: 3
       metricsConfig:
@@ -80,7 +83,7 @@ spec:
       storage:
         type: persistent-claim
         size: 4Gi
-        class: ""
+        class: enter-storage-class-name-here
   requestIbmServices:
     iam: true
     monitoring: true

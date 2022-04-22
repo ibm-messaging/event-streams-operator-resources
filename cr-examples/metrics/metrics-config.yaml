@@ -20,4 +20,4 @@ data:
       pattern: kafka.server<type=ReplicaManager, name=(\\w+)><>(Value)
   zookeeper-metrics-config.yaml: |
     lowercaseOutputName: true
-    rules: [] 
+    rules: []
