@@ -15,7 +15,7 @@ kind: EventStreams
 metadata:
   name: development
 spec:
-  version: 11.0.3
+  version: 11.0.4
   license:
     # By installing this product you accept the license terms at https://ibm.biz/es-license
     accept: false
@@ -60,7 +60,7 @@ spec:
         valueFrom:
           configMapKeyRef:
             key: kafka-metrics-config.yaml
-            name: metrics-config
+            name: development-metrics-config
       storage:
         type: ephemeral
     zookeeper:
@@ -70,7 +70,7 @@ spec:
         valueFrom:
           configMapKeyRef:
             key: zookeeper-metrics-config.yaml
-            name: metrics-config
+            name: development-metrics-config
       storage:
         type: ephemeral
   requestIbmServices:

@@ -15,7 +15,7 @@ kind: EventStreams
 metadata:
   name: light-insecure
 spec:
-  version: 11.0.3
+  version: 11.0.4
   license:
     # By installing this product you accept the license terms at https://ibm.biz/es-license
     accept: false
@@ -41,14 +41,14 @@ spec:
           port: 9092
           type: internal
           tls: false
+      storage:
+        type: ephemeral
       metricsConfig:
         type: jmxPrometheusExporter
         valueFrom:
           configMapKeyRef:
             key: kafka-metrics-config.yaml
-            name: metrics-config
-      storage:
-        type: ephemeral
+            name: light-insecure-metrics-config
     zookeeper:
       replicas: 1
       metricsConfig:
@@ -56,7 +56,7 @@ spec:
         valueFrom:
           configMapKeyRef:
             key: zookeeper-metrics-config.yaml
-            name: metrics-config
+            name: light-insecure-metrics-config
       storage:
         type: ephemeral
   requestIbmServices:
