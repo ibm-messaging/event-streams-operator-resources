@@ -15,7 +15,7 @@ kind: EventStreams
 metadata:
   name: minimal-prod
 spec:
-  version: 11.0.3
+  version: 11.0.4
   license:
     # By installing this product you accept the license terms at https://ibm.biz/es-license
     accept: false
@@ -55,13 +55,12 @@ spec:
           tls: true
           authentication:
             type: tls
-
       metricsConfig:
         type: jmxPrometheusExporter
         valueFrom:
           configMapKeyRef:
             key: kafka-metrics-config.yaml
-            name: metrics-config
+            name: minimal-prod-metrics-config
       storage:
         type: persistent-claim
         size: 4Gi
@@ -73,7 +72,7 @@ spec:
         valueFrom:
           configMapKeyRef:
             key: zookeeper-metrics-config.yaml
-            name: metrics-config
+            name: minimal-prod-metrics-config
       storage:
         type: persistent-claim
         size: 2Gi
