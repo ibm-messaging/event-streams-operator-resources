@@ -15,7 +15,7 @@ kind: EventStreams
 metadata:
   name: development
 spec:
-  version: 11.0.4
+  version: latest
   license:
     # By installing this product you accept the license terms at https://ibm.biz/es-license
     accept: false
