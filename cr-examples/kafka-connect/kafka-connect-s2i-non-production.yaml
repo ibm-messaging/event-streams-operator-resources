@@ -27,12 +27,12 @@ spec:
           eventstreams.production.type: CloudPakForIntegrationNonProduction
           productID: 2a79e49111f44ec3acd89608e56138f5
           productName: IBM Event Streams for Non Production
-          productVersion: 11.1.0
+          productVersion: 11.1.1
           productMetric: VIRTUAL_PROCESSOR_CORE
           productChargedContainers: <ADD-NAME-OF-KAFKA-CONNECT-CR>-connect
           cloudpakId: c8b82d189e7545f0892db9ef2731b90d
           cloudpakName: IBM Cloud Pak for Integration
-          cloudpakVersion: 2022.2.1
+          cloudpakVersion: 2022.4.1
           productCloudpakRatio: "2:1"
   bootstrapServers: my-cluster-kafka-bootstrap:9093
   tls:
