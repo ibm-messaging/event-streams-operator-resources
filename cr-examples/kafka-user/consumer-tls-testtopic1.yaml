@@ -30,14 +30,17 @@ spec:
           type: topic
           name: testtopic1
           patternType: literal
-        operation: Read
+        operations:
+          - Read
       - resource:
           type: group
           name: '*'
           patternType: literal
-        operation: Read
+        operations:
+          - Read
       - resource:
           type: topic
           name: __schema_
           patternType: prefix
-        operation: Read
+        operations:
+          - Read

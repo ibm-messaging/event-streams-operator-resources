@@ -30,29 +30,20 @@ spec:
           type: topic
           name: '*'
           patternType: literal
-        operation: Write
-      - resource:
-          type: topic
-          name: '*'
-          patternType: literal
-        operation: Read
-      - resource:
-          type: topic
-          name: '*'
-          patternType: literal
-        operation: Create
+        operations:
+          - Write
+          - Read
+          - Create
       - resource:
           type: group
           name: '*'
           patternType: literal
-        operation: Read
+        operations:
+          - Read
       - resource:
           type: topic
           name: "__schema_"
           patternType: prefix
-        operation: Read
-      - resource:
-          type: topic
-          name: "__schema_"
-          patternType: prefix
-        operation: Alter
+        operations:
+          - Read
+          - Alter
