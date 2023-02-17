@@ -30,9 +30,11 @@ spec:
           type: topic
           name: testtopic1
           patternType: prefix
-        operation: Write
+        operations:
+          - Write
       - resource:
           type: topic
           name: __schema_
           patternType: prefix
-        operation: Read
+        operations:
+          - Read
