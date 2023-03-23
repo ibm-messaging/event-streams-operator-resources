@@ -121,7 +121,7 @@ spec:
           "tableColumn": "",
           "targets": [
             {
-              "expr": "count(kafka_server_replicamanager_leadercount_value{namespace=\"$kubernetes_namespace\",eventstreams_ibm_com_cluster=\"$eventstreams_cluster_name\",eventstreams_ibm_com_discovery=\"\"})",
+              "expr": "count(kafka_server_replicamanager_leadercount_value{namespace=\"$kubernetes_namespace\",eventstreams_ibm_com_cluster=\"$eventstreams_cluster_name\"})",
               "format": "time_series",
               "hide": false,
               "intervalFactor": 1,
@@ -205,7 +205,7 @@ spec:
           "tableColumn": "",
           "targets": [
             {
-              "expr": "sum(kafka_controller_kafkacontroller_activecontrollercount_value{namespace=\"$kubernetes_namespace\",eventstreams_ibm_com_cluster=\"$eventstreams_cluster_name\",eventstreams_ibm_com_discovery=\"\"})",
+              "expr": "sum(kafka_controller_kafkacontroller_activecontrollercount_value{namespace=\"$kubernetes_namespace\",eventstreams_ibm_com_cluster=\"$eventstreams_cluster_name\"})",
               "format": "time_series",
               "hide": false,
               "intervalFactor": 1,
@@ -288,7 +288,7 @@ spec:
           "tableColumn": "",
           "targets": [
             {
-              "expr": "sum(irate(kafka_controller_controllerstats_uncleanleaderelectionspersec_count{namespace=\"$kubernetes_namespace\",eventstreams_ibm_com_cluster=\"$eventstreams_cluster_name\",eventstreams_ibm_com_discovery=\"true\"}[5m]))",
+              "expr": "sum(irate(kafka_controller_controllerstats_uncleanleaderelectionspersec_count{namespace=\"$kubernetes_namespace\",eventstreams_ibm_com_cluster=\"$eventstreams_cluster_name\"}[5m]))",
               "format": "time_series",
               "hide": false,
               "intervalFactor": 1,
@@ -581,7 +581,7 @@ spec:
           "tableColumn": "",
           "targets": [
             {
-              "expr": "sum(kafka_server_replicamanager_partitioncount_value{namespace=\"$kubernetes_namespace\",eventstreams_ibm_com_cluster=\"$eventstreams_cluster_name\",eventstreams_ibm_com_discovery=\"\",pod=~\"$kafka_broker\"})",
+              "expr": "sum(kafka_server_replicamanager_partitioncount_value{namespace=\"$kubernetes_namespace\",eventstreams_ibm_com_cluster=\"$eventstreams_cluster_name\",pod=~\"$kafka_broker\"})",
               "format": "table",
               "instant": false,
               "intervalFactor": 1,
@@ -664,7 +664,7 @@ spec:
           "tableColumn": "",
           "targets": [
             {
-              "expr": "sum(kafka_server_replicamanager_underreplicatedpartitions_value{namespace=\"$kubernetes_namespace\",eventstreams_ibm_com_cluster=\"$eventstreams_cluster_name\",eventstreams_ibm_com_discovery=\"\",pod=~\"$kafka_broker\"})",
+              "expr": "sum(kafka_server_replicamanager_underreplicatedpartitions_value{namespace=\"$kubernetes_namespace\",eventstreams_ibm_com_cluster=\"$eventstreams_cluster_name\",pod=~\"$kafka_broker\"})",
               "format": "time_series",
               "hide": false,
               "intervalFactor": 2,
@@ -747,7 +747,7 @@ spec:
           "tableColumn": "",
           "targets": [
             {
-              "expr": "sum(kafka_server_replicamanager_underminisrpartitioncount_value{namespace=\"$kubernetes_namespace\",eventstreams_ibm_com_cluster=\"$eventstreams_cluster_name\",eventstreams_ibm_com_discovery=\"\",pod=~\"$kafka_broker\"})",
+              "expr": "sum(kafka_server_replicamanager_underminisrpartitioncount_value{namespace=\"$kubernetes_namespace\",eventstreams_ibm_com_cluster=\"$eventstreams_cluster_name\",pod=~\"$kafka_broker\"})",
               "format": "time_series",
               "hide": false,
               "intervalFactor": 2,
@@ -830,7 +830,7 @@ spec:
           "tableColumn": "",
           "targets": [
             {
-              "expr": "sum(kafka_server_replicamanager_atminisrpartitioncount_value{namespace=\"$kubernetes_namespace\",eventstreams_ibm_com_cluster=\"$eventstreams_cluster_name\",eventstreams_ibm_com_discovery=\"\",pod=~\"$kafka_broker\"})",
+              "expr": "sum(kafka_server_replicamanager_atminisrpartitioncount_value{namespace=\"$kubernetes_namespace\",eventstreams_ibm_com_cluster=\"$eventstreams_cluster_name\",pod=~\"$kafka_broker\"})",
               "format": "time_series",
               "hide": false,
               "intervalFactor": 2,
@@ -913,7 +913,7 @@ spec:
           "tableColumn": "",
           "targets": [
             {
-              "expr": "sum(kafka_controller_kafkacontroller_offlinepartitionscount_value{namespace=\"$kubernetes_namespace\",eventstreams_ibm_com_cluster=\"$eventstreams_cluster_name\",eventstreams_ibm_com_discovery=\"\",pod=~\"$kafka_broker\"})",
+              "expr": "sum(kafka_controller_kafkacontroller_offlinepartitionscount_value{namespace=\"$kubernetes_namespace\",eventstreams_ibm_com_cluster=\"$eventstreams_cluster_name\",pod=~\"$kafka_broker\"})",
               "format": "time_series",
               "hide": false,
               "intervalFactor": 1,
