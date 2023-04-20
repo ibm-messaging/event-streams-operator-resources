@@ -13,6 +13,8 @@
 apiVersion: eventstreams.ibm.com/v1beta2
 kind: EventStreams
 metadata:
+  annotations:
+    eventstreams.ibm.com/apicurio-registry-version: ">=2.4"
   name: prod-9-brokers
 spec:
   version: latest
